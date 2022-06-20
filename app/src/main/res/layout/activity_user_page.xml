@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".users_activities.UserPage">
+
+    <RelativeLayout
+        android:id="@+id/userMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/topMenu"
+            android:background="@color/bastBlue"
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <RelativeLayout
+                android:id="@+id/gemsCounter"
+                android:layout_margin="7.5dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/round_textview_l"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/gemsImage"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginTop="7.5dp"
+                    android:foreground="@drawable/coin2"/>
+
+                <TextView
+                    android:id="@+id/gemsNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_toRightOf="@id/gemsImage"
+                    android:gravity="center"
+                    android:text=" 100 "
+                    android:textColor="@color/bastBlue"
+                    android:textSize="22.5dp"
+                    android:textStyle="bold" />
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/coinCounter"
+                android:layout_margin="7.5dp"
+                android:layout_width="wrap_content"
+                android:layout_toLeftOf="@id/gemsCounter"
+                android:background="@drawable/round_textview_l"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/coinImage"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginTop="7.5dp"
+                    android:foreground="@drawable/coin1"/>
+
+                <TextView
+                    android:id="@+id/coinNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginRight="7.5dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_toRightOf="@id/coinImage"
+                    android:gravity="center"
+                    android:text=" 200 "
+                    android:textColor="@color/bastBlue"
+                    android:textSize="22.5dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="7.5dp"
+                android:layout_toLeftOf="@id/coinCounter"
+                android:background="@drawable/round_textview_d">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="games room"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:onClick="moveToGameRoom"
+                    android:textSize="22.5dp"/>
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/userProp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/topMenu"
+            android:background="@drawable/b3">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/bastBlue"
+                android:layout_below="@id/userImage"/>
+
+            <ImageView
+                android:id="@+id/userImage"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:foreground="@drawable/defult_user" />
+
+            <TextView
+                android:id="@+id/nameTeller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userImage"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="7.5dp"
+                android:text="name:"
+                android:textColor="@color/white"
+                android:textSize="22.5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userImage"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_toRightOf="@id/nameTeller"
+                android:textColor="@color/white"
+                android:textSize="22.5dp" />
+
+            <TextView
+                android:id="@+id/levelTeller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTeller"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="7.5dp"
+                android:text="level:"
+                android:textColor="@color/white"
+                android:textSize="22.5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userlevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTeller"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_toRightOf="@id/nameTeller"
+                android:textColor="@color/white"
+                android:textSize="22.5dp" />
+
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="15dp"
+                android:background="@drawable/button1"
+                android:onClick="logOut"
+                android:text="log out" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userUpdateMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/b3"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="15dp"
+            android:background="@drawable/round_textview_l"
+            android:onClick="userUpdate">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:text="new user version is available press here to update"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".users_activities.MainActivity">
+
+    <RelativeLayout
+
+        android:id="@+id/loadingMenu"
+        android:background="@color/bastBlue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            app:srcCompat="@android:drawable/stat_sys_upload" />
+        <RelativeLayout
+            android:id="@+id/noInterner"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="there's no internet connection"
+                android:gravity="center"
+                android:textSize="22.5dp"
+                android:textColor="@color/white"/>
+
+
+            <Button
+                android:id="@+id/tryAgainB"
+                android:clickable="false"
+                android:onClick="tryAgain"
+                android:layout_width="180dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button1"
+                android:text="try again"
+                android:textSize="22.5dp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

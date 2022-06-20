@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".game.gameActivites.GameList">
+
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:background="@color/bastBlue"
+        android:layout_height="75dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="chess game list"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_margin="7.5dp"
+            android:textSize="22.5dp"/>
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:background="@drawable/button1"
+            android:text="back"
+            android:onClick="moveBack"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroolView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/b1"
+        android:layout_below="@id/title">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

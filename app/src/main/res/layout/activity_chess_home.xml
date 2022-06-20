@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".game.games.chess.ChessHome">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/bastBlue">
+
+        <RelativeLayout
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginStart="7.5dp"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginTop="7.5dp"
+            android:layout_marginEnd="7.5dp"
+            android:layout_marginRight="7.5dp"
+            android:layout_marginBottom="7.5dp"
+            android:background="@drawable/chess_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:text="chess"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/requestWait"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginStart="7.5dp"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginTop="7.5dp"
+            android:layout_marginEnd="7.5dp"
+            android:layout_marginRight="7.5dp"
+            android:layout_marginBottom="7.5dp"
+            android:background="@drawable/round_textview_l"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/requestWaitText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7.5dp"
+                android:gravity="center"
+                android:text="looking for players"
+                android:textColor="@color/black"
+                android:textSize="22.5dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/waitingLogo"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="7.5dp"
+                android:foreground="@android:drawable/stat_notify_sync"
+                android:foregroundTint="@color/black" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/logo"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="7.5dp"
+            android:gravity="center"
+            android:onClick="nameClick"
+            android:text="user1"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+        <TextView
+            android:id="@+id/userLevel"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:layout_below="@id/logo"
+            android:onClick="levelClick"
+            android:gravity="center"
+            android:text="800"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_marginRight  ="15dp"
+            android:layout_marginBottom="7.5dp"/>
+
+
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/games"
+        android:layout_below="@id/title"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_above="@id/gameList"
+        tools:layout_editor_absoluteX="1dp"
+        android:background="@drawable/b2"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:id="@+id/modesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/gameList"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/b1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <Button
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:text="game list"
+            android:onClick="moveToGameList"
+            android:textSize="30dp"
+            android:background="@drawable/button1"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+</RelativeLayout>
